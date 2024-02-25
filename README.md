@@ -1,7 +1,7 @@
 # rethinking-modes
 Suggests scales to improvise over chords.
 ### Explaination: tl;dr
-rethinking-modes is a simple program to help musicians improvise and conceptualise the bigger tonal picture when experimenting with accidental notes. It is a framework to write, undersand and improvise with Non Diatonic music (music that exists outside of any one key signature).
+rethinking-modes is a simple program to help musicians improvise and conceptualise the bigger tonal picture when experimenting with accidental notes. It is a framework to write, understand and improvise non diatonic music (music that exists outside of any one key signature).
 
 ## Demos
 ### C Major Scale
@@ -31,5 +31,7 @@ Given The Chord Gm , Use Key Centres: ['Eb', 'Bb', 'F']
 Given The Chord G , Use Key Centres: ['C', 'G', 'D']
 ```
 
-### Explaination: Too Long, DID read
-It's possible to use Set Theory to understand harmony, with notes being the smallest unit. If we consider a chord to be a set of three notes and a key signature to be a set of seven notes, we can determine which chords can be played in a key signature, and therefore the inverse, which key signatures can be overlayed over a chord. Calculating harmony this way is ineffecient. Luckily, a musical concept called the circle of fifths sorts key signatures to be in an order in which there is a minimal different between adjacent sets. A quick way to find out which scales are compatible with a chord is to consult adjacent entries on the circle of fifths. The circle of fifths is accessed in this program by changing intervals using the `move_up` function.
+### Explaination pt.2 : Too Long, DID read
+It's possible to use set theory to understand harmony, with notes being the smallest unit. If we consider a chord to be a set of three notes and a key signature to be a set of seven notes, we can determine which chords can be played in a key signature, and therefore the inverse, which key signatures can be overlayed over a chord. These key signatures, also sometimes referred to as key centres, scales, or "modes" are what we are interested in. 
+
+To calculate them slightly faster, we can use a musical concept called the circle of fifths, which says that the key signatures available for a chord will always be certain distances away from it (one fifth above and below, + the current chord. e.g. `Cmaj` chord exists in `C`, `G`, & `F`). The circle of fifths is accessed in this program using the `move_up` function.
